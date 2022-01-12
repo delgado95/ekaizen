@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>e-Kaizen Digital</title>
+    <link href="favicon.ico" rel="icon" sizes="16x16" type="image/x-icon">
+    <link href="favicon.ico" rel="icon" sizes="32x32" type="image/x-icon">
+    <link href="favicon.ico" rel="apple-touch-icon" sizes="180x180" type="image/x-icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/index.css">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap-5.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/scrollCue-2.0.0/scrollCue.css" />
+    <link rel="stylesheet" href="assets/vendor/aos-2.3.1/aos.css" />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="assets/fonts/montserrat.css">
+</head>
+
+<body>
+  <header>
+      <nav class="navbar navbar-expand-xl py-3 mb-2">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-2" href="index-2.html">
+            <img class="logo" src="assets/images/favicon.png" alt="eKaizen Icon">
+            <span class="label ms-2">e-Kaizen</span>
+          </a>
+          <button
+            id="btnMenu"
+            class="btn navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navigation"
+            aria-controls="navigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span id="menuClosed">
+              <img src="assets/images/icons-site/hamburger.svg" alt="Icon closed">
+            </span>
+            <span id="menuOpened" hidden>
+              <img src="assets/images/icons-site/close.svg" alt="Icon opened">
+            </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="1500">
+                <a href="#" class="nav-link link-dark ms-5 active">Início</a>
+              </li>
+              <li data-aos="fade-right" data-aos-easing="ease-in-quart" data-aos-duration="1000">
+                <a href="pages/tools.html" class="nav-link link-dark ms-5">Ferramentas</a>
+              </li>
+              <li data-aos="fade-right" data-aos-easing="ease-in-cubic" data-aos-duration="500">
+                <a href="pages/contact.html" class="nav-link link-dark ms-5">Contato</a>
+              </li>
+              <li class="mt-2 separator d-none d-xl-block"><span class="ms-5">|</span></li>
+              <li class="e-com" data-aos="fade-right" data-aos-easing="ease-in-back" data-aos-duration="200">
+                <span class="link-dark ms-5">e-Commerce</span>
+              </li>
+              <li data-aos="fade-right" data-aos-easing="ease-in-cubic" data-aos-duration="350">
+                <a href="http://instituto.ekaizen.digital/instituto/" target="_blank" class="nav-link link-dark ms-5">EAD</a>
+              </li>
+            </ul>
+
+            <form class="d-flex float-end">
+              <div class="btn-group" role="group" aria-label="buttons group">
+                <a id="loginGK" class="btn btn-outline-secondary">
+                  Gestão Kaizen
+                </a>
+                <a id="loginAD" class="btn btn-outline-secondary me-3">
+                  Admin
+                </a>
+              </div>
+              <a id="loginEK" class="btn text-white btn-login">
+                Login
+              </a>
+            </form>
+          </div>
+        </div>
+      </nav>
+  </header>
+
+  <section class="presentation">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-12 tools-circle">
+            <img src="assets/images/circle.png" usemap="#image-map" alt="Image tools icons" class="img-tools-circle" />
+            <map name="image-map">
+              <span>
+                <area id="pillarMaintenance" coords="315,0,367,56" shape="rect" alt="Area maintenance">
+                <span class="badge bg-light text-dark p-3" id="tooltipPillarMaintenance" hidden>Manutenção</span>
+              </span>
+              <span>
+                <area id="pillarQuality" coords="458,119,406,64" shape="rect" alt="Area quality">
+                <span class="badge bg-light text-dark p-3" id="tooltipPillarQuality" hidden>Qualidade</span>
+              </span>
+              <span>
+                <area id="pillarLogistics" coords="458,164,510,218" shape="rect" alt="Area logistics">
+                <span class="badge bg-light text-dark p-3" id="tooltipPillarLogistics" hidden>Logística</span>
+              </span>
+              <span>
+                <area id="pillarProduction" coords="459,273,511,331" shape="rect" alt="Area production">
+                <span class="badge bg-light text-dark p-3" id="tooltipPillarProduction" hidden>Produção</span>
+              </span>
+              <span>
+                <area id="pillarEhs" coords="405,382,457,438" shape="rect" alt="Area ehs">
+                <span class="badge bg-light text-dark p-3" id="tooltipPillarEhs" hidden>Pehs</span>
+              </span>
+              <span>
+                <area id="pillarOperational" coords="315,448,369,504" shape="rect" alt="Area operational">
+                <span class="badge bg-light text-dark p-3" id="tooltipPillarOperational" hidden>Excelência Operacional</span>
+              </span>
+
+              <!-- Modules -->
+              <span>
+                <area id="moduleSafety" coords="147,53,194,109" shape="rect" alt="Area safety">
+                <span class="badge bg-light text-dark p-3" id="tooltipModuleSafety" hidden>Safety</span>
+              </span>
+              <span>
+                <area id="moduleCosts" coords="66,133,114,185" shape="rect" alt="Area costs">
+                <span class="badge bg-light text-dark p-3" id="tooltipModuleCosts" hidden>Custos</span>
+              </span>
+              <span>
+                <area id="moduleTraining" coords="44,238,92,291" shape="rect" alt="Area training">
+                <span class="badge bg-light text-dark p-3" id="tooltipModuleTraining" hidden>TN (Treinamento e Negócio)</span>
+              </span>
+              <span>
+                <area id="moduleQa" coords="78,342,126,395" shape="rect" alt="Area QA">
+                <span class="badge bg-light text-dark p-3" id="tooltipModuleQa" hidden>Qualidade Avançada</span>
+              </span>
+              <span>
+                <area id="moduleAi" coords="160,406,210,459" shape="rect" alt="Area AI">
+                <span class="badge bg-light text-dark p-3" id="tooltipModuleAi" hidden>Inteligência Artificial</span>
+              </span>
+            </map>
+          </div>
+
+          <div class="col-md-6 tools-cell">                                         <!-- Introduction text -->
+            <div class="present-tools">
+              <div class="welcome-text">
+                <p id="typeText"></p>
+              </div>
+
+              <!-- PILLARS -->
+              <div id="maintenanceTools" class="maintenance-tools" hidden>          <!-- Maintenance -->
+                <h3 class="mt-2" data-cue="zoomOut">MANUTENÇÃO</h3>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/emanutencao-icon.png" alt="Icon e-Manutenção"></p>
+                    <p>e-Manutenção</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/digital_twin-icon.svg" alt="Icon Digital Twin"></p>
+                    <p>Digital Twin</p>
+                  </div>
+                </div>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/ernc-icon.png" alt="Icon e-RNC"></p>
+                    <p>e-RNC</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/econnect-icon.png" alt="Icon e-Connect"></p>
+                    <p>e-Connect</p>
+                  </div>
+                </div>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/eghc-icon.png" alt="Icon e-GHC"></p>
+                    <p>e-GHC</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/edoctec-icon.png" alt="Icon e-Doctec"></p>
+                    <p>e-Doctec</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="qualityTools" class="quality-tools" hidden>                  <!-- Quality -->
+                <h3 class="mt-2" data-cue="zoomOut">QUALIDADE</h3>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/equality-icon.png" alt="Icon e-Quality"></p>
+                    <p>e-Quality</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/ealerta-icon.png" alt="Icon e-Alerta"></p>
+                    <p>e-Alerta</p>
+                  </div>
+                </div>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/echecklist-icon.svg" alt="Icon e-Checklist"></p>
+                    <p>e-Checklist</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/econnect-icon.png" alt="Icon e-Connect"></p>
+                    <p>e-Connect</p>
+                  </div>
+                </div>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/edoctec-icon.png" alt="Icon e-Doctec"></p>
+                    <p>e-Doctec</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/etools-icon.png" alt="Icon e-Tools"></p>
+                    <p>e-Tools</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="logisticsTools" class="logistics-tools" hidden>              <!-- Logistics -->
+                <h3 class="mt-2" data-cue="zoomOut">LOGÍSTICA</h3>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/eauditorias-icon.png" alt="Icon e-Auditorias"></p>
+                    <p>e-Auditorias</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/ernc-icon.png" alt="Icon e-RNC"></p>
+                    <p>e-RNC</p>
+                  </div>
+                </div>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/econnect-icon.png" alt="Icon e-Connect"></p>
+                    <p>e-Connect</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/eghc-icon.png" alt="Icon e-GHC"></p>
+                    <p>e-GHC</p>
+                  </div>
+                </div>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/edoctec-icon.png" alt="Icon e-Doctec"></p>
+                    <p>e-Doctec</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/digital_twin-icon.svg" alt="Icon Digital Twin"></p>
+                    <p>Digital Twin</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="productionTools" class="production-tools" hidden>            <!-- Production -->
+                <h3 class="mt-2" data-cue="zoomOut">PRODUÇÃO</h3>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/eproduction-icon.png" alt="Icon e-Production"></p>
+                    <p>e-Produção</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/ernc-icon.png" alt="Icon e-RNC"></p>
+                    <p>e-RNC</p>
+                  </div>
+                </div>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/econnect-icon.png" alt="Icon e-Connect"></p>
+                    <p>e-Connect</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/eghc-icon.png" alt="Icon e-GHC"></p>
+                    <p>e-GHC</p>
+                  </div>
+                </div>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/edoctec-icon.png" alt="Icon e-Doctec"></p>
+                    <p>e-Doctec</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/etools-icon.png" alt="Icon e-Tools"></p>
+                    <p>e-Tools</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="ehsTools" class="ehs-tools" hidden>                          <!-- Ehs -->
+                <h3 class="mt-2" data-cue="zoomOut">P-EHS</h3>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/eauditorias-icon.png" alt="Icon e-Auditorias"></p>
+                    <p>e-Auditorias</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/ernc-icon.png" alt="Icon e-RNC"></p>
+                    <p>e-RNC</p>
+                  </div>
+                </div>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/econnect-icon.png" alt="Icon e-Connect"></p>
+                    <p>e-Connect</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/etagoutpro-icon.png" alt="Icon e-Tagout"></p>
+                    <p>e-Tagout</p>
+                  </div>
+                </div>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/eghc-icon.png" alt="Icon e-GHC"></p>
+                    <p>e-GHC</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/edoctec-icon.png" alt="Icon e-Doctec"></p>
+                    <p>e-Doctec</p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="operationalTools" class="operational-tools" hidden>          <!-- Operational Excellence -->
+                <h3 class="mt-2" data-cue="zoomOut">EXCELÊNCIA OPERACIONAL</h3>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/etpm-icon.svg" alt="Icon e-TPM"></p>
+                    <p>e-TPM</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/e5s-icon.png" alt="Icon e-5S"></p>
+                    <p>e-5S</p>
+                  </div>
+                </div>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/eprojetos-icon.png" alt="Icon e-Projetos"></p>
+                    <p>e-Projetos</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/echecklist-icon.svg" alt="Icon e-Checklist"></p>
+                    <p>e-Checklist</p>
+                  </div>
+                </div>
+                <div class="pillar-boxes" data-cue="bounceInLeft">
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/eauditorias-icon.png" alt="Icon e-Auditorias"></p>
+                    <p>e-Auditorias</p>
+                  </div>
+                  <div class="blocks bg-body">
+                    <p><img src="assets/images/icons-tools-bold/econnect-icon.png" alt="Icon e-Connect"></p>
+                    <p>e-Connect</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MODULES -->
+              <div id="safetyModule" class="safety-module" hidden>                  <!-- Safety -->
+                <h3 class="mt-2" data-cue="zoomIn">SAFETY</h3>
+                <div class="module-boxes" data-cue="bounceInUp">
+                  <div class="blocks bg-body">
+                    <p>
+                      Unidade de Negócio e-Kaizen especializada nas ferramentas e consultoria em Gestão da Segurança.
+                    </p>
+                    <hr>
+                    <p>
+                      <img src="assets/images/icons-modules-bold/safety-icon.svg" width="80" height="80" alt="Icon Safety">
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="costsModule" class="costs-module" hidden>                    <!-- Costs -->
+                <h3 class="mt-2" data-cue="zoomIn">CUSTOS</h3>
+                <div class="module-boxes" data-cue="bounceInUp">
+                  <div class="blocks bg-body">
+                    <p>
+                      Unidade de Negócio permite uma rápida e precisa modelagem dos resultados financeiros parametrizados na
+                      plataforma onde é possível trazer visões em tempo real significativas de custos de toda organização para
+                      tomadas de decisões estratégicas.
+                    </p>
+                    <hr>
+                    <p>
+                      <img src="assets/images/icons-modules-bold/custos-icon.svg" width="80" height="80" alt="Icon Custos">
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="trainingModule" class="training-module" hidden>              <!-- Training and Business -->
+                <h3 class="mt-2" data-cue="zoomIn">TREINAMENTO E NEGÓCIO</h3>
+                <div class="module-boxes" data-cue="bounceInUp">
+                  <div class="blocks bg-body">
+                    <p>
+                      Unidade de Negócio e-Kaizen especializada nas ferramentas de treinamentos, com apoio de vendas de
+                      produtos no módulo ecommerce e apoio de Marketing para clientes e parceiros.
+                    </p>
+                    <hr>
+                    <p>
+                      <img src="assets/images/icons-modules-bold/treinamento_negocio-icon.svg" width="80" height="80" alt="Icon TN">
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="qaModule" class="qa-module" hidden>                          <!-- Advanced Quality -->
+                <h3 class="mt-2" data-cue="zoomIn">QUALIDADE AVANÇADA</h3>
+                <div class="module-boxes" data-cue="bounceInUp">
+                  <div class="blocks bg-body">
+                    <p>
+                      Módulo de qualidade avançada (e-QA) permite a gestão totalmente digital da equipe, fornecedores e clientes, oferecendo
+                      gestão completa das fases e ferramentas digitais necessárias para o desenvolvimento do processo como: Aprovação de
+                      Peça (PPAP), Modo de Falhas e Análise de efeitos (FMEA), Controle Estatístico do Processo (CEP) e Análise do Sistema
+                      de Medição (MSA) entre outras.
+                    </p>
+                    <hr>
+                    <p class="minor-box">
+                      <img src="assets/images/icons-modules-bold/calibracao_metrologica-icon.svg" width="80" height="80" alt="Icon Calibração">
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div id="aiModule" class="ai-module" hidden>                          <!-- Artificial Intelligence -->
+                <h3 class="mt-2" data-cue="zoomIn">INTELIGÊNCIA ARTIFICIAL</h3>
+                <div class="module-boxes" data-cue="bounceInUp">
+                  <div class="blocks bg-body">
+                    <p>
+                      Unidade de Negócio  (IA) têm a capacidade de classificar e prever eventos futuros a partir de um conjunto de dados de
+                      treinamento e testes, oferecendo uma probabilidade de ocorrência para cada evento. O Sistema de IA têm multiplas
+                      aplicações, como análise preditiva de falhas de sistemas, entre outros.
+                    </p>
+                    <hr>
+                    <p>
+                      <img src="assets/images/icons-modules-bold/inteligencia_artificial-icon.svg" width="80" height="80" alt="Icon AI">
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section id="about" class="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 about-animation">
+            <img class="img-layer1" src="assets/images/layers/layer1.png" alt="Image layer1">
+            <img class="img-layer2" src="assets/images/layers/layer2.png" alt="Image layer2">
+            <img class="img-layer3" src="assets/images/layers/layer3.png" alt="Image layer3">
+            <img class="img-layer4" src="assets/images/layers/layer4.png" alt="Image layer4">
+          </div>
+          <div class="col-md-7 cols-sm-12 col-12">
+            <h2 data-cue="fadeIn" data-delay="150">Sobre nós</h2>
+            <p class="mt-4" data-cue="fadeIn" data-delay="300">
+              Somos uma empresa composta por engenheiros industriais e arquitetos de sistemas com ampla
+              experiência no "chão de fábrica", na gestão e implantação de projetos de melhoria contínua.
+            <p data-cue="slideInDown" data-delay="380" data-duration="500">
+              Com objetivo de sustentar os projetos desenvolvemos ferramentas eletrônicas de gestão,
+              consideradas como um dos pilares da indústria 4.0, ferramentas com capacidade de gerenciar
+              todas as informações e o conhecimento gerado a partir dos processos.
+            </p>
+            <p data-cue="slideInUp" data-delay="350" data-duration="800">
+              Nossas ferramentas são de baixo custo para nossos clientes, viabilizando a utilização para qualquer tamanho de empresa.
+            </p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <div class="wave1"></div>
+
+  <section id="tools" class="tools">
+      <div class="container">
+        <div class="row">
+          <h2 class="text-center" data-cue="slideInDown" data-delay="300">Nossas Ferramentas</h2>
+        </div>
+        <div class="row justify-content-evenly">
+          <div id="carouselTools" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselTools" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselTools" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselTools" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselTools" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselTools" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselTools" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carouselTools" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="5000">
+                <div class="container">
+                  <div class="row">
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#e5s">
+                        <img src="assets/images/icons-tools-bold/e5s-icon.png" alt="Icon e-5s">
+                        <h4>E-5S</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#eauditorias">
+                        <img src="assets/images/icons-tools-bold/eauditorias-icon.png" alt="Icon e-Auditorias">
+                        <h4>E-Auditorias</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#ernc">
+                        <img src="assets/images/icons-tools-bold/ernc-icon.png" alt="Icon e-Rnc">
+                        <h4>E-RNC</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <div class="container">
+                  <div class="row">
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#econnect">
+                        <img src="assets/images/icons-tools-bold/econnect-icon.png" alt="Icon e-Connect">
+                        <h4>E-Connect</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#eprojetos">
+                        <img src="assets/images/icons-tools-bold/eprojetos-icon.png" alt="Icon e-Projetos">
+                        <h4>E-Projetos</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#eproduction">
+                        <img src="assets/images/icons-tools-bold/eproduction-icon.png" alt="Icon e-Production">
+                        <h4>E-Production</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <div class="container">
+                  <div class="row">
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#emaintenance">
+                        <img src="assets/images/icons-tools-bold/emanutencao-icon.png" alt="Icon e-Manutenção">
+                        <h4>E-MAN</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#einspecao">
+                        <img src="assets/images/icons-tools-bold/equality-icon.png" alt="Icon e-Inspeção">
+                        <h4>E-Inspeção</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#edoctec">
+                        <img src="assets/images/icons-tools-bold/edoctec-icon.png" alt="Icon e-Doctec">
+                        <h4>E-Doctec</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <div class="container">
+                  <div class="row">
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#ealerta">
+                        <img src="assets/images/icons-tools-bold/ealerta-icon.png" alt="Icon e-Alerta">
+                        <h4>E-Alerta</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#ewms">
+                        <img src="assets/images/icons-tools-bold/ewms-icon.svg" alt="Icon e-WMS">
+                        <h4>E-WMS</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#digitaltwin">
+                        <img src="assets/images/icons-tools-bold/digital_twin-icon.svg" alt="Icon Digital Twin">
+                        <h4>Digital Twin</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <div class="container">
+                  <div class="row">
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#etools">
+                        <img src="assets/images/icons-tools-bold/etools-icon.png" alt="Icon e-Tools">
+                        <h4>E-Tools</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#etagout">
+                        <img src="assets/images/icons-tools-bold/etagoutpro-icon.png" alt="Icon e-Tagout">
+                        <h4>E-Tagout</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#eghc">
+                        <img src="assets/images/icons-tools-bold/eghc-icon.png" alt="Icon e-GHC">
+                        <h4>E-GHC</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <div class="container">
+                  <div class="row">
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#eapqp">
+                        <img src="assets/images/icons-tools-bold/eapqp-icon.svg" alt="Icon e-APQP">
+                        <h4>E-APQP</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#echecklist">
+                        <img src="assets/images/icons-tools-bold/echecklist-icon.svg" alt="Icon e-Checklist">
+                        <h4>E-Checklist</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#ebsc">
+                        <img src="assets/images/icons-tools-bold/ebsc-icon.svg" alt="Icon e-BSC">
+                        <h4>E-BSC</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item" data-bs-interval="5000">
+                <div class="container">
+                  <div class="row">
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#epcp">
+                        <img src="assets/images/icons-tools-bold/epcp-icon.svg" alt="Icon e-PCP">
+                        <h4>E-PCP</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#etpm">
+                        <img src="assets/images/icons-tools-bold/etpm-icon.svg" alt="Icon e-TPM">
+                        <h4>E-TPM</h4>
+                      </a>
+                    </div>
+                    <div class="col boxes ms-3">
+                      <a class="w-100 h-100 btn" href="pages/tools.html#ekanban">
+                        <img src="assets/images/icons-tools-bold/ekanban-icon.svg" alt="Icon e-Kanban">
+                        <h4>E-Kanban</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4">
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselTools" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselTools" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="contact">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <h2 data-cue="slideInLeft" data-delay="300" data-duration="350">Entre em contato conosco!</h2>
+            <p class="mt-5" data-cue="zoomIn" data-duration="700">
+              Queremos tirar suas dúvidas, ouvir suas sugestões e oferecer a você e sua empresa serviços de qualidade.
+            </p>
+            <span data-cue="bounceInUp" data-delay="500" data-duration="350">
+              <a class="btn btn-contact text-white" href="pages/contact.html#form">Enviar Mensagem</a>
+            </span>
+          </div>
+          <div class="col-md-4 contacts">
+            <p>
+              <span class="text-warning" data-cue="slideInRight" data-delay="300" data-duration="350">
+                <img src="assets/images/icons-site/phone.svg" alt="Icon Telefone">
+              </span>
+              <span class="ms-2">(19) 3894-3932</span>
+            </p>
+            <p>
+              <span class="text-warning" data-cue="slideInRight" data-delay="250" data-duration="350">
+                <img src="assets/images/icons-site/email.svg" alt="Icon Email">
+              </span>
+              <span class="ms-2">contato@ekaizen.digital</span>
+            </p>
+            <p>
+              <span class="text-warning" data-cue="slideInRight" data-delay="200" data-duration="350">
+                <img src="assets/images/icons-site/location.svg" alt="Icon Localização">
+              </span>
+              <span class="ms-2">Av. Fábio Ferraz Bicudo, 433 - Indaiatuba/ SP</span>
+            </p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <footer class="border-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center">
+            <img class="logo" src="assets/images/favicon.png" alt="eKaizen Icon">
+            <p class="mt-3 text-muted">© 2021 Copyright: <b>e-Kaizen</b></p>
+          </div>
+        </div>
+      </div>
+  </footer>
+
+  <button id="btnToTop" class="btn btn-lg rounded-circle">&#8673;</button>
+
+  <!-- JS -->
+    <script src="assets/vendor/bootstrap-5.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/scrollCue-2.0.0/scrollCue.min.js"></script>
+    <script src="assets/vendor/aos-2.3.1/aos.js"></script>
+    <script src="scripts/index.js" type="module"></script>
+    <script src="resources.js"></script>
+
+  <!-- Animation On Scroll -->
+  <script>
+    AOS.init();
+    scrollCue.init({
+      interval: -585
+    });
+  </script>
+
+</body>
+</html>

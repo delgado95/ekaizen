@@ -1,0 +1,891 @@
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    background: rgba(14, 64, 73, 0.5);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgba(14, 64, 73, 0.8);
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, .btn, a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* #### Header ### */
+.navbar-collapse {
+    margin-left: 5%;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar .label {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #000;
+}
+
+.navbar-brand img:hover ~ .label, .navbar-brand .label:hover {
+    color: #953223;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-shadow: 0 0 1px #000;
+}
+
+.nav-link.active {
+    color: #953223;
+    font-weight: bold;
+    text-shadow: 1px 0 1px #000;
+}
+
+.nav-link:hover {
+    right: 0;
+    text-decoration: none;
+}
+
+.nav-link:hover:after {
+    border-color: #953223;
+    right: 0;
+}
+
+.nav-link:after {
+    border-radius: 1em;
+    border-top: .2em solid #953223;
+    content: "";
+    position: absolute;
+    right: 100%;
+    bottom: .14em;
+    left: 0;
+    transition: right .4s cubic-bezier(0,.5,0,1), border-color .4s ease-out;
+}
+
+.navbar .btn-login {
+    background-color: #953223;
+}
+
+.navbar .btn-login:hover {
+    background-color: rgb(169, 78, 42);
+}
+
+li.e-com {
+    margin-top: 10px;
+}
+
+/* ### Presentation ### */
+.presentation {
+    height: 100vh;
+    width: 100%;
+    background-image: url(../assets/images/background.png);
+    background-size: 100% 102vh;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.presentation img {
+    margin-top: 25%;
+}
+
+.presentation map area {
+    cursor: pointer;
+}
+
+.presentation .tools-circle .img-tools-circle {
+    animation: circleAnimation 2.8s ease-in-out 1 normal;
+}
+
+@keyframes circleAnimation {
+    from { transform: rotate(420deg); opacity: 0 }
+    to { transform: rotate(360deg); opacity: 1 }
+}
+
+.presentation .tools-cell {
+    height: 95vh;
+    background-image: url(../assets/images/cell-tools.svg);
+    background-size: 60%;
+    background-position: 68% 25%;
+    background-repeat: no-repeat;
+}
+
+.presentation .present-tools .welcome-text {
+    position: relative;
+    width: 16vw;
+    top: 34vh;
+    left: 33.5%;
+    font-size: 2rem;
+    line-height: 60px;
+    font-weight: bold;
+    text-align: center;
+    text-indent: each-line;
+    text-shadow: 0 0 0 #AA4A2E;
+}
+
+/* Pillars */
+.presentation .present-tools .maintenance-tools,
+.presentation .present-tools .quality-tools,
+.presentation .present-tools .logistics-tools,
+.presentation .present-tools .production-tools,
+.presentation .present-tools .ehs-tools,
+.presentation .present-tools .operational-tools {
+    position: relative;
+    width: 313px;
+    top: 95px;
+    left: 33%;
+    text-align: center;
+}
+
+.presentation .present-tools .pillar-boxes {
+    margin-top: 40px;
+    height: 135px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.presentation .present-tools .pillar-boxes .blocks {
+    flex-basis: 46%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px, rgba(0, 0, 0, 0.3) 0 18px 36px -18px;
+    color: #6e6d6d;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.presentation .present-tools .pillar-boxes .blocks:hover {
+    cursor: pointer;
+    filter: saturate(5) drop-shadow(6px 6px 8px #999);
+    margin-top: -5px;
+}
+
+.presentation .present-tools .pillar-boxes .blocks img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Modules */
+.presentation .present-tools .safety-module,
+.presentation .present-tools .costs-module,
+.presentation .present-tools .training-module,
+.presentation .present-tools .qa-module,
+.presentation .present-tools .ai-module {
+    position: relative;
+    width: 313px;
+    top: 95px;
+    left: 33%;
+    text-align: center;
+}
+
+.presentation .present-tools .module-boxes {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.presentation .present-tools .module-boxes .blocks {
+    box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px, rgba(0, 0, 0, 0.3) 0 18px 36px -18px;
+    color: #6e6d6d;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.presentation .present-tools .module-boxes .blocks .minor-box img {
+    margin-top: 15%;
+}
+
+    /* Tooltips */
+.badge {
+    position: absolute;
+}
+
+#tooltipPillarMaintenance {
+    top: 250px;
+    left: 700px;
+}
+
+#tooltipPillarQuality {
+    top: 340px;
+}
+
+#tooltipPillarLogistics {
+    top: 450px;
+    left: 850px;
+}
+
+#tooltipPillarProduction {
+    top: 570px;
+    left: 830px;
+}
+
+#tooltipPillarEhs {
+    top: 670px;
+    left: 790px;
+}
+
+#tooltipPillarOperational {
+    top: 750px;
+    left: 700px;
+}
+
+#tooltipModuleSafety {
+    top: 315px;
+    left: 315px;
+}
+
+#tooltipModuleCosts {
+    top: 400px;
+    left: 240px;
+}
+
+#tooltipModuleTraining {
+    top: 500px;
+    left: 110px;
+}
+
+#tooltipModuleQa {
+    top: 610px;
+    left: 170px;
+}
+
+#tooltipModuleAi {
+    top: 690px;
+    left: 250px;
+}
+
+/* ### About ### */
+.about {
+    height: 62vh;
+}
+
+.about h2 {
+    margin-top: 14vh;
+    font-weight: 600;
+}
+
+.about p {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+    line-height: 28px;
+}
+
+.about .about-animation {
+    margin-top: 70px;
+    background-size: auto;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+
+.about .img-layer1:hover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.about .img-layer1 {
+    animation: animationLayer1 3.5s ease-in infinite;
+}
+
+.about .img-layer2 {
+    margin-left: -255px;
+    animation: animationLayer2 3.4s ease-in-out infinite;
+}
+
+.about .img-layer3 {
+    margin-left: -185px;
+    animation: animationLayer3 3.6s ease-in-out infinite;
+}
+
+.about .img-layer4 {
+    margin-left: -165px;
+    animation: animationLayer4 3.7s linear infinite;
+}
+
+@keyframes animationLayer1 {
+    0% { margin-left: 0 }
+    50% { margin-left: -50px }
+    100% { margin-left: 0 }
+}
+
+@keyframes animationLayer2 {
+    0% { margin-left: -255px }
+    50% { margin-left: -230px }
+    100% { margin-left: -255px }
+}
+
+@keyframes animationLayer3 {
+    0% { margin-left: -185px; margin-top: 0 }
+    50% { margin-left: -200px; margin-top: 15px }
+    100% { margin-left: -185px; margin-top: 0 }
+}
+
+@keyframes animationLayer4 {
+    0% { margin-left: -185px; margin-top: 0 }
+    50% { margin-left: -200px; margin-top: 30px }
+    100% { margin-left: -185px; margin-top: 0 }
+}
+
+/* ### Tools ### */
+.tools {
+    background-color: #FAFAFA;
+    height: 85vh;
+}
+
+.tools h2 {
+    margin-top: 12vh;
+    font-weight: 600;
+}
+
+.tools .boxes {
+    margin-top: 10vh;
+    height: 30vh;
+    background-color: #ffffff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px, rgba(0, 0, 0, 0.3) 0 8px 16px -8px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.tools .boxes:hover {
+    background-color: rgba(248, 249, 250, 0.82);
+    transform: scaleX(1.1);
+}
+
+.tools .boxes a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tools .boxes img {
+    position: relative;
+    top: 26%;
+    width: 65px;
+    height: 65px;
+}
+
+.tools .boxes h4 {
+    margin-top: 20px;
+    color: #2B5370;
+    font-weight: bold;
+    position: relative;
+    top: 30%;
+}
+
+.tools .carousel .carousel-inner {
+    height: 55vh;
+    width: 75%;
+    margin-left: 12%;
+}
+
+.tools .carousel .carousel-inner .carousel-item .container {
+    height: 50vh;
+}
+
+@keyframes infoToolsAnimation {
+    from { margin-top: -13vh; opacity: 0 }
+    to { margin-top: 13vh; opacity: 1 }
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    margin-top: -6vh;
+}
+
+/* ### Contact ### */
+.contact {
+    height: 60vh;
+    background-image: url(../assets/images/layers.png);
+    background-size: 60%;
+    background-position: 82% 20%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.contact p {
+    font-size: 1.1rem;
+}
+
+.contact .btn-contact {
+    background-color: #953223;
+}
+
+.contact .btn-contact:hover {
+    background-color: rgb(169, 78, 42);
+}
+
+.contact h2 {
+    margin-top: 15vh;
+    font-weight: 600;
+}
+
+.contact a {
+    margin-top: 3vh;
+}
+
+.contact .contacts {
+    margin-top: 34vh;
+}
+
+.contact .contacts span {
+    font-size: 1rem;
+}
+
+/* ### Footer ### */
+footer {
+    background-color: #FAFAFA;
+    height: 15vh;
+}
+
+footer .logo {
+    width: 70px;
+    height: 70px;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 1.1rem;
+    line-height: 18px;
+}
+
+/* ### Waves ### */
+.wave1 {
+    margin-top: -3%;
+    width: 100%;
+    height: 16%;
+    background-image: url(../assets/images/wave1.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #FAFAFA;
+}
+
+/* Scrool Button */
+#btnToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    background-color: rgba(14, 64, 73, 0.8);
+    color: white;
+    cursor: pointer;
+}
+
+#btnToTop:hover {
+    background-color: #953223;
+}
+
+/* ##############
+#  MEDIA QUERY  #
+############## */
+
+    /* RULES */
+    /* Small	     sm	≥576px  */
+    /* Medium	     md	≥768px  */
+    /* Large	     lg	≥992px  */
+
+@media only screen and (max-width: 576px) {
+    /* #### Header ### */
+    #btn-menu, #btn-menu:focus {
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+    }
+
+    .navbar-collapse {
+        margin-left: -5%;
+    }
+
+    .nav-link:after {
+        border-top: none;
+    }
+
+    /* #### Presentation ### */
+    .presentation {
+        height: 80vh;
+        background-size: cover;
+    }
+
+    .presentation .tools-circle img {
+        width: 100%;
+    }
+
+    .presentation .tools-cell {
+        display: none;
+    }
+
+    /* #### About ### */
+    .about {
+        height: 100vh;
+    }
+
+    .about .about-animation {
+        display: none;
+    }
+
+    .about h2 {
+        margin-top: 0;
+    }
+
+    /* #### Tools ### */
+    .tools {
+        height: 115vh;
+        padding: 0 10%;
+    }
+
+    .tools h2 {
+        margin-top: 0;
+    }
+
+    .tools .carousel .carousel-inner {
+        height: 100vh;
+        margin-top: 5vh;
+    }
+
+    .tools .carousel .carousel-inner .boxes {
+        height: 25vh;
+        margin: 8% 0;
+    }
+
+    .tools .carousel-inner .boxes img, .tools .carousel-inner .boxes h4 {
+        top: 5%;
+        font-size: 1rem;
+    }
+
+    /* ### Contact ### */
+    .contact {
+        height: 75vh;
+        background-size: 100%;
+        background-position: 145px 35%;
+    }
+
+    .contact h2 {
+        margin-top: 5vh;
+    }
+
+    .contact .contacts {
+        margin-top: 10vh;
+    }
+
+    /* #### Footer ### */
+    footer {
+        height: 20vh;
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    /* #### Header ### */
+    #btn-menu, #btn-menu:focus {
+        box-shadow: 0 0 0 0;
+        border: 0 none;
+        outline: 0;
+    }
+
+    .navbar-collapse {
+        margin-left: -3%;
+    }
+
+    .nav-link:after {
+        border-top: none;
+    }
+
+    /* #### Presentation ### */
+    .presentation {
+        height: 220vh;
+        background-size: cover;
+    }
+
+    .presentation .tools-circle img {
+        width: 100%;
+    }
+
+    .presentation .tools-cell {
+        display: none;
+    }
+
+    /* #### About ### */
+    .about {
+        height: 135vh;
+    }
+
+    .about .about-animation {
+        display: none;
+    }
+
+    .about h2 {
+        margin-top: 3vh;
+    }
+
+    /* #### Tools ### */
+    .tools {
+        height: 190vh;
+    }
+
+    .tools .carousel .carousel-inner {
+        height: 150vh;
+    }
+
+    .tools .carousel .carousel-inner .boxes {
+        height: 55vh;
+        width: 33.3%;
+    }
+
+    .tools .carousel .carousel-inner .boxes img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .tools .carousel .carousel-inner .boxes h4 {
+        font-size: 1.1rem;
+    }
+
+    /* ### Contact ### */
+    .contact {
+        height: 110vh;
+        background-position: 285px 40%;
+        background-size: contain;
+    }
+
+    .contact h2 {
+        margin-top: 5vh;
+    }
+
+    .contact .contacts {
+        margin-top: 10vh;
+    }
+
+    /* #### Footer ### */
+    footer {
+        height: 40vh;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1366px) and (max-height: 768px) {
+    /* #### Header ### */
+    header {
+        height: 11vh;
+    }
+
+    .navbar-collapse {
+        margin-left: 2%;
+    }
+
+    .nav-link {
+        font-size: .8rem;
+    }
+
+    li.e-com {
+        margin-top: 8px;
+        font-size: .8rem;
+    }
+
+    /* ### Presentation ### */
+    .presentation {
+        height: 130vh;
+        width: 100%;
+        margin-top: -11vh;
+        background-size: 100% 107vh;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .presentation .tools-cell {
+        height: 155vh;
+        background-image: url(../assets/images/cell-tools.svg);
+        background-size: 55%;
+        background-position: 65% 25%;
+        background-repeat: no-repeat;
+    }
+
+    .presentation .present-tools .welcome-text {
+        top: 45vh;
+        left: 37%;
+        font-size: 2rem;
+    }
+
+    .presentation .present-tools .maintenance-tools,
+    .presentation .present-tools .quality-tools,
+    .presentation .present-tools .logistics-tools,
+    .presentation .present-tools .production-tools,
+    .presentation .present-tools .ehs-tools,
+    .presentation .present-tools .operational-tools {
+        width: 19.2vw;
+        margin-top: 9vh;
+    }
+
+    .presentation .present-tools .pillar-boxes {
+        margin-top: 25px;
+        height: 115px;
+    }
+
+    .presentation .present-tools .pillar-boxes .blocks {
+        flex-basis: 45%;
+    }
+
+    .presentation .present-tools .pillar-boxes .blocks p {
+        font-size: 0.7rem;
+        margin-top: -5px;
+    }
+
+    .presentation .present-tools .safety-module,
+    .presentation .present-tools .costs-module,
+    .presentation .present-tools .training-module,
+    .presentation .present-tools .qa-module,
+    .presentation .present-tools .ai-module {
+        width: 17.5vw;
+        top: 22vh;
+        left: 35.1%;
+        font-size: 0.9rem;
+    }
+
+    .presentation .present-tools .qa-module {
+        font-size: 0.7rem;
+    }
+
+    .presentation .present-tools .ai-module {
+        font-size: 0.8rem;
+    }
+
+    .presentation .present-tools .module-boxes .blocks img {
+        width: 40px;
+        height: 40px;
+        margin-top: 6vh;
+    }
+
+    #tooltipPillarMaintenance {
+        top: 140px;
+        left: 540px;
+    }
+
+    #tooltipPillarQuality {
+        top: 210px;
+    }
+
+    #tooltipPillarLogistics {
+        top: 330px;
+        left: 650px;
+    }
+
+    #tooltipPillarProduction {
+        top: 440px;
+        left: 640px;
+    }
+
+    #tooltipPillarEhs {
+        top: 545px;
+        left: 600px;
+    }
+
+    #tooltipPillarOperational {
+        top: 625px;
+        left: 515px;
+    }
+
+    #tooltipModuleSafety {
+        top: 200px;
+        left: 155px;
+    }
+
+    #tooltipModuleCosts {
+        top: 290px;
+        left: 75px;
+    }
+
+    #tooltipModuleTraining {
+        top: 435px;
+        left: 25px;
+    }
+
+    #tooltipModuleQa {
+        top: 540px;
+        left: 15px;
+    }
+
+    #tooltipModuleAi {
+        top: 610px;
+        left: 110px;
+    }
+
+    /* ### About ### */
+    .about h2 {
+        margin-top: 0;
+    }
+
+    .about .about-animation {
+        margin-top: -5vh;
+    }
+
+    /* ### Tools ### */
+    .tools {
+        height: 90vh;
+    }
+
+    .tools .carousel .carousel-inner {
+        height: 63vh;
+    }
+
+    .tools .carousel .carousel-inner .carousel-item {
+        height: 70vh;
+    }
+
+    .tools .carousel .carousel-inner .carousel-item img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .tools .boxes {
+        height: 40vh;
+    }
+
+    .tools .boxes p {
+        height: 19vh;
+        font-size: 0.9rem;
+        line-height: 1.2;
+    }
+
+    .tools .boxes:hover > p {
+        display: block;
+        animation: infoToolsAnimation 0.4s linear 0s forwards;
+        cursor: default;
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        margin-top: 0;
+    }
+
+    @keyframes infoToolsAnimation {
+        from { margin-top: -15vh; opacity: 0 }
+        to { margin-top: 15vh; opacity: 1 }
+    }
+
+    /* ### Contact ### */
+    .contact {
+        height: 62vh;
+        background-size: 60%;
+        background-position: 80% 1%;
+    }
+
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+}
